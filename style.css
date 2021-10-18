@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: rgb(51, 48, 2);
+    color: rgb(243, 234, 242);
+    height: 50px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+nav ul{
+    list-style-type: none; /*bullets removed*/
+    font-size: 40px;
+    font-family: cursive;
+}
+
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: antiquewhite;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* position: relative; */
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 5vw; /*we need a responsive website thats why vw*/
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: rgb(241, 220, 220);
+}
+
+.info{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.gameinfo{
+    padding: 0 34px; /* Padding andr se hoti hai aur margin bahar se*/
+    font-family: cursive;
+}
+
+.gameinfo h1{
+    font-size: 2.5rem;
+}
+
+.image img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+  /*Borders to be hidden*/
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset{
+    margin: 0 25px;
+    padding: 5px 20px;
+    background: rgb(209, 137, 209);
+    border-radius: 10px;
+    cursor: pointer;
+    font-family:cursive;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+/* .line{
+    background-color: rgb(4, 4, 63);
+    height: 3px;
+    width: 30vw;
+    position: absolute;
+} */
+
+@media screen and (max-width: 900px)
+{
+    /* #contents{width: 90%} */
+    .gameContainer{
+    flex-wrap: wrap;
+    }
+    .gameinfo{
+        margin-top: 34px;
+    }
+    .gameinfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    }
+}
